@@ -1,4 +1,5 @@
-$background-grey: #ccc;
+$background-grey: #f3f3f3;
+$button-grey: #5e5e5e;
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6,3 +7,34 @@ body {
   line-height: 1.3rem;
   background-color: $background-grey;
 }
+
+button {
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  margin-left: .5rem;
+  cursor: pointer;
+  color: $button-grey;
+  outline: none;
+}
+
+.container {
+  font-size: 1rem;
+}
+
+.tdl-input {
+  padding: .5rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.tdl-task {
+  padding: .5rem;
+}
+
+.is-completed {
+  text-decoration: line-through;
+  color: $button-grey;
+}
+
