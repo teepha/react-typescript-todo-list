@@ -12,17 +12,20 @@ export class App extends React.Component<{}, IState> {
 
   public handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    this.setState({
-      currentTask: "",
-      tasks: [
-        ...this.state.tasks,
-        {
-          id: this._timeInMilliseconds(),
-          value: this.state.currentTask,
-          completed: false
-        }
-      ]
-    });
+    const { currentTask } = this.state;
+    if (currentTask.trim() !== "") {
+      this.setState({
+        currentTask: "",
+        tasks: [
+          ...this.state.tasks,
+          {
+            id: this._timeInMilliseconds(),
+            value: currentTask.trim(),
+            completed: false
+          }
+        ]
+      });
+    }
   }
 
   public deleteTask(id: number): void {
